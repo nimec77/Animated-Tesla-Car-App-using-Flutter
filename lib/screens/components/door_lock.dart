@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tesla_animated_app/constanins.dart';
 
-import '../../constanins.dart';
 
 class DoorLock extends StatelessWidget {
   const DoorLock({
@@ -18,7 +18,7 @@ class DoorLock extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: AnimatedSwitcher(
-        duration: defaultDuration,
+        duration: kDefaultDuration,
         switchInCurve: Curves.easeInOutBack,
         transitionBuilder: (child, animation) => ScaleTransition(
           scale: animation,
@@ -26,12 +26,12 @@ class DoorLock extends StatelessWidget {
         ),
         child: isLock
             ? SvgPicture.asset(
-                "assets/icons/door_lock.svg",
-                key: ValueKey("lock"),
+                'assets/icons/door_lock.svg',
+                key: const ValueKey('lock'),
               )
             : SvgPicture.asset(
-                "assets/icons/door_unlock.svg",
-                key: ValueKey("unlock"),
+                'assets/icons/door_unlock.svg',
+                key: const ValueKey('unlock'),
               ),
       ),
     );

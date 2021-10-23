@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tesla_animated_app/constanins.dart';
 
-import '../../constanins.dart';
 
 class TeslaBottomNavigationBar extends StatelessWidget {
   const TeslaBottomNavigationBar({
@@ -25,9 +25,9 @@ class TeslaBottomNavigationBar extends StatelessWidget {
         (index) => BottomNavigationBarItem(
           icon: SvgPicture.asset(
             navIconSrc[index],
-            color: index == selectedTab ? primaryColor : Colors.white54,
+            color: index == selectedTab ? kPrimaryColor : Colors.white54,
           ),
-          label: "",
+          label: '',
         ),
       ),
     );
@@ -35,8 +35,8 @@ class TeslaBottomNavigationBar extends StatelessWidget {
 }
 
 List<String> navIconSrc = [
-  "assets/icons/Lock.svg",
-  "assets/icons/Charge.svg",
-  "assets/icons/Temp.svg",
-  "assets/icons/Tyre.svg",
+  'assets/icons/Lock.svg',
+  'assets/icons/Charge.svg',
+  'assets/icons/Temp.svg',
+  'assets/icons/Tyre.svg',
 ];
