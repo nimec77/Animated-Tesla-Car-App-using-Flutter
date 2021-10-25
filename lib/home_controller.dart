@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class HomeController extends ChangeNotifier {
-  // we use HomeController for logical part
-
   bool isRightDoorLock = true;
   bool isLeftDoorLock = true;
   bool isBonnetLock = true;
@@ -23,7 +21,7 @@ class HomeController extends ChangeNotifier {
     notifyListeners();
   }
 
-  void updateTrunkDoorLock() {
+  void updateTrunkLock() {
     isTrunkLock = !isTrunkLock;
     notifyListeners();
   }

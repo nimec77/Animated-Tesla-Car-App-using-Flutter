@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tesla_animated_app/constanins.dart';
-
+import 'package:flutter_svg/svg.dart';
+import 'package:tesla_animated_app/constants.dart';
 
 class TeslaBottomNavigationBar extends StatelessWidget {
-  const TeslaBottomNavigationBar({
+  TeslaBottomNavigationBar({
     Key? key,
     required this.selectedTab,
     required this.onTap,
@@ -12,6 +11,13 @@ class TeslaBottomNavigationBar extends StatelessWidget {
 
   final int selectedTab;
   final ValueChanged<int> onTap;
+
+  final _navIconScr = [
+    'assets/icons/lock.svg',
+    'assets/icons/charge.svg',
+    'assets/icons/temp.svg',
+    'assets/icons/tyre.svg',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +27,10 @@ class TeslaBottomNavigationBar extends StatelessWidget {
       type: BottomNavigationBarType.fixed,
       backgroundColor: Colors.black,
       items: List.generate(
-        navIconSrc.length,
-        (index) => BottomNavigationBarItem(
+        _navIconScr.length,
+            (index) => BottomNavigationBarItem(
           icon: SvgPicture.asset(
-            navIconSrc[index],
+            _navIconScr[index],
             color: index == selectedTab ? kPrimaryColor : Colors.white54,
           ),
           label: '',
@@ -33,10 +39,3 @@ class TeslaBottomNavigationBar extends StatelessWidget {
     );
   }
 }
-
-List<String> navIconSrc = [
-  'assets/icons/Lock.svg',
-  'assets/icons/Charge.svg',
-  'assets/icons/Temp.svg',
-  'assets/icons/Tyre.svg',
-];

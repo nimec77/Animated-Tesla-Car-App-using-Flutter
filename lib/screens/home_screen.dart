@@ -16,59 +16,55 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _controller,
-      builder: (context, _) {
+      builder: (context, child) {
         return Scaffold(
           bottomNavigationBar: TeslaBottomNavigationBar(
             onTap: (index) {},
             selectedTab: 0,
           ),
           body: SafeArea(
-            child: LayoutBuilder(
-              builder: (context, constrains) {
-                return Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(vertical: constrains.maxHeight * 0.1),
-                      child: SvgPicture.asset(
-                        'assets/icons/Car.svg',
-                        width: double.infinity,
-                      ),
+            child: LayoutBuilder(builder: (context, constrains) {
+              return Stack(
+                alignment: Alignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: constrains.maxHeight * 0.1),
+                    child: SvgPicture.asset(
+                      'assets/icons/car.svg',
+                      width: double.infinity,
                     ),
-                    // Door Locks
-                    Positioned(
-                      right: constrains.maxWidth * 0.05,
-                      child: DoorLock(
-                        isLock: _controller.isRightDoorLock,
-                        press: _controller.updateRightDoorLock,
-                      ),
+                  ),
+                  Positioned(
+                    right: constrains.maxWidth * 0.05,
+                    child: DoorLock(
+                      isLock: _controller.isRightDoorLock,
+                      press: _controller.updateRightDoorLock,
                     ),
-                    Positioned(
-                      left: constrains.maxWidth * 0.05,
-                      child: DoorLock(
-                        isLock: _controller.isLeftDoorLock,
-                        press: _controller.updateLeftDoorLock,
-                      ),
+                  ),
+                  Positioned(
+                    left: constrains.maxWidth * 0.05,
+                    child: DoorLock(
+                      isLock: _controller.isLeftDoorLock,
+                      press: _controller.updateLeftDoorLock,
                     ),
-                    Positioned(
-                      top: constrains.maxHeight * 0.13,
-                      child: DoorLock(
-                        isLock: _controller.isBonnetLock,
-                        press: _controller.updateBonnetDoorLock,
-                      ),
+                  ),
+                  Positioned(
+                    top: constrains.maxHeight * 0.13,
+                    child: DoorLock(
+                      isLock: _controller.isBonnetLock,
+                      press: _controller.updateBonnetDoorLock,
                     ),
-                    Positioned(
-                      bottom: constrains.maxHeight * 0.17,
-                      child: DoorLock(
-                        isLock: _controller.isTrunkLock,
-                        press: _controller.updateTrunkDoorLock,
-                      ),
+                  ),
+                  Positioned(
+                    bottom: constrains.maxHeight * 0.17,
+                    child: DoorLock(
+                      isLock: _controller.isTrunkLock,
+                      press: _controller.updateTrunkLock,
                     ),
-                    // See how easy it is
-                  ],
-                );
-              },
-            ),
+                  ),
+                ],
+              );
+            }),
           ),
         );
       },

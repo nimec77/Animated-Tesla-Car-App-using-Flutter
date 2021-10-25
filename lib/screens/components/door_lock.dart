@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tesla_animated_app/constanins.dart';
-
+import 'package:flutter_svg/svg.dart';
+import 'package:tesla_animated_app/constants.dart';
 
 class DoorLock extends StatelessWidget {
   const DoorLock({
     Key? key,
-    required this.press,
     required this.isLock,
+    required this.press,
   }) : super(key: key);
 
   final VoidCallback press;
@@ -27,11 +26,11 @@ class DoorLock extends StatelessWidget {
         child: isLock
             ? SvgPicture.asset(
                 'assets/icons/door_lock.svg',
-                key: const ValueKey('lock'),
+                key: const Key('assets_icons_door_lock'),
               )
             : SvgPicture.asset(
                 'assets/icons/door_unlock.svg',
-                key: const ValueKey('unlock'),
+                key: const Key('assets_icons_door_unlock'),
               ),
       ),
     );
