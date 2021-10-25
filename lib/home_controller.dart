@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HomeController extends ChangeNotifier {
+  int selectedBottomTab = 0;
+
   bool isRightDoorLock = true;
   bool isLeftDoorLock = true;
   bool isBonnetLock = true;
@@ -23,6 +25,11 @@ class HomeController extends ChangeNotifier {
 
   void updateTrunkLock() {
     isTrunkLock = !isTrunkLock;
+    notifyListeners();
+  }
+
+  void onBottomNavigationTabChange(int index) {
+    selectedBottomTab = index;
     notifyListeners();
   }
 }
