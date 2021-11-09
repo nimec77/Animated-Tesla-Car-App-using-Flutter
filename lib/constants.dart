@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-const Color kPrimaryColor = Color(0xFF53F9FF);
-const Color kRedColor = Color(0xFFFF5368);
+const Color primaryColor = Color(0xFF53F9FF);
+const Color redColor = Color(0xFFFF5368);
 
-const double kDefaultPadding = 16;
-const Duration kDefaultDuration = Duration(milliseconds: 300);
+const double defaultPadding = 16;
+const Duration defaultDuration = Duration(milliseconds: 300);

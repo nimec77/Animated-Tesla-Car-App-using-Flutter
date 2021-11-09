@@ -31,7 +31,7 @@ class TeslaBottomNavigationBar extends StatelessWidget {
             (index) => BottomNavigationBarItem(
           icon: SvgPicture.asset(
             _navIconScr[index],
-            color: index == selectedTab ? kPrimaryColor : Colors.white54,
+            color: index == selectedTab ? primaryColor : Colors.white54,
           ),
           label: '',
         ),

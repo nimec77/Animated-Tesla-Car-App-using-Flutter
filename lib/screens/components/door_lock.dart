@@ -17,7 +17,7 @@ class DoorLock extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: AnimatedSwitcher(
-        duration: kDefaultDuration,
+        duration: defaultDuration,
         switchInCurve: Curves.easeInOutBack,
         transitionBuilder: (child, animation) => ScaleTransition(
           scale: animation,

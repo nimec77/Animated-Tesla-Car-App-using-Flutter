@@ -41,7 +41,7 @@ class BatteryStatus extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: kDefaultPadding),
+        const SizedBox(height: defaultPadding),
       ],
     );
   }
