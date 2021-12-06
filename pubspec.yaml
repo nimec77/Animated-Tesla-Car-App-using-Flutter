@@ -18,9 +18,10 @@ dependencies:
 
 
 dev_dependencies:
+  dart_code_metrics: ^4.8.1
   flutter_test:
     sdk: flutter
-  very_good_analysis: ^2.4.0
+#  very_good_analysis: ^2.4.0
 
 flutter:
   # The following line ensures that the Material Icons font is

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tesla_animated_app/constants.dart';
 import 'package:tesla_animated_app/home_controller.dart';
