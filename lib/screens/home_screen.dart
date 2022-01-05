@@ -218,15 +218,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         width: constraints.maxWidth * 0.45,
                       ),
                     ),
-                    Positioned(
-                      top: 50 * (1 - _animationBatteryStatus.value),
-                      height: constraints.maxHeight,
-                      width: constraints.maxWidth,
-                      child: Opacity(
-                        opacity: _animationBatteryStatus.value,
-                        child: BatteryStatus(constraints: constraints),
+                    if (_controller.selectedBottomTab == 1)
+                      Positioned(
+                        top: 50 * (1 - _animationBatteryStatus.value),
+                        height: constraints.maxHeight,
+                        width: constraints.maxWidth,
+                        child: Opacity(
+                          opacity: _animationBatteryStatus.value,
+                          child: BatteryStatus(constraints: constraints),
+                        ),
                       ),
-                    ),
                     Positioned(
                       width: constraints.maxWidth,
                       height: constraints.maxHeight,

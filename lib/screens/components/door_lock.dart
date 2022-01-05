@@ -15,7 +15,10 @@ class DoorLock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: press,
+      onTap: () {
+        debugPrint('press');
+        press();
+      },
       child: AnimatedSwitcher(
         duration: defaultDuration,
         switchInCurve: Curves.easeInOutBack,
