@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tesla_animated_app/constants.dart';
+import 'package:flutter_tesla/constants.dart';
 
 class BatteryStatus extends StatelessWidget {
   const BatteryStatus({

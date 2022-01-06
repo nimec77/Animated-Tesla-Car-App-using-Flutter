@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tesla_animated_app/constants.dart';
-import 'package:tesla_animated_app/models/tyre_psi.dart';
+import 'package:flutter_tesla/constants.dart';
+import 'package:flutter_tesla/models/tyre_psi.dart';
 
 class TyrePsiCard extends StatelessWidget {
   const TyrePsiCard({

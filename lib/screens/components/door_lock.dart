@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:tesla_animated_app/constants.dart';
+import 'package:flutter_tesla/constants.dart';
 
 class DoorLock extends StatelessWidget {
   const DoorLock({
@@ -15,10 +15,7 @@ class DoorLock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        debugPrint('press');
-        press();
-      },
+      onTap: press,
       child: AnimatedSwitcher(
         duration: defaultDuration,
         switchInCurve: Curves.easeInOutBack,

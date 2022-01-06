@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:tesla_animated_app/constants.dart';
-import 'package:tesla_animated_app/home_controller.dart';
-import 'package:tesla_animated_app/models/tyre_psi.dart';
-import 'package:tesla_animated_app/screens/components/battery_status.dart';
-import 'package:tesla_animated_app/screens/components/door_lock.dart';
-import 'package:tesla_animated_app/screens/components/temp_details.dart';
-import 'package:tesla_animated_app/screens/components/tesla_bottom_navigation_bar.dart';
-import 'package:tesla_animated_app/screens/components/tyre_psi_card.dart';
-import 'package:tesla_animated_app/screens/components/tyres_list.dart';
+import 'package:flutter_tesla/constants.dart';
+import 'package:flutter_tesla/home_controller.dart';
+import 'package:flutter_tesla/models/tyre_psi.dart';
+import 'package:flutter_tesla/screens/components/battery_status.dart';
+import 'package:flutter_tesla/screens/components/door_lock.dart';
+import 'package:flutter_tesla/screens/components/temp_details.dart';
+import 'package:flutter_tesla/screens/components/tesla_bottom_navigation_bar.dart';
+import 'package:flutter_tesla/screens/components/tyre_psi_card.dart';
+import 'package:flutter_tesla/screens/components/tyres_list.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
